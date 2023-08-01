@@ -1,0 +1,580 @@
+# <?php
+
+# class FormKeys
+# {
+#     private function __construct()
+#     {
+#     }
+
+#     public const ACCESSORY_LIST = 'accessoryList'
+#     public const ACCESSORY_NAME = 'accessoryName'
+#     public const ACCESSORY_ID = 'ACCESSORY_ID'
+#     public const ACCESSORY_QUANTITY_AVAILABLE = 'accessoryQuantityAvailable'
+#     public const ACCESSORY_RESOURCE = 'accessoryResource'
+#     public const ACCESSORY_MIN_QUANTITY = 'ACCESSORY_MIN_QUANTITY'
+#     public const ACCESSORY_MAX_QUANTITY = 'ACCESSORY_MAX_QUANTITY'
+#     public const ADDITIONAL_RESOURCES = 'additionalResources'
+#     public const ADDRESS = 'address';
+#     public const ALLOW_CALENDAR_SUBSCRIPTIONS = 'ALLOW_CALENDAR_SUBSCRIPTIONS';
+#     public const ALLOW_MULTIDAY = 'allowMultiday';
+#     public const ALLOW_PARTICIPATION = 'ALLOW_PARTICIPATION';
+#     public const ANNOUNCEMENT_TEXT = 'announcementText';
+#     public const ANNOUNCEMENT_START = 'announcementStart';
+#     public const ANNOUNCEMENT_END = 'announcementEnd';
+#     public const ANNOUNCEMENT_PRIORITY = 'announcementPriority';
+#     public const ATTRIBUTE_ID = 'ATTRIBUTE_ID';
+#     public const ATTRIBUTE_VALUE = 'ATTRIBUTE_VALUE';
+#     public const ATTRIBUTE_LABEL = 'ATTRIBUTE_LABEL';
+#      ATTRIBUTE_TYPE = 'ATTRIBUTE_TYPE';
+#      ATTRIBUTE_CATEGORY = 'ATTRIBUTE_CATEGORY';
+#      ATTRIBUTE_VALIDATION_EXPRESSION = 'ATTRIBUTE_VALIDATION_EXPRESSION';
+#      ATTRIBUTE_IS_ADMIN_ONLY = 'ATTRIBUTE_IS_ADMIN_ONLY';
+#      ATTRIBUTE_IS_REQUIRED = 'ATTRIBUTE_IS_REQUIRED';
+#      ATTRIBUTE_IS_UNIQUE = 'ATTRIBUTE_IS_UNIQUE';
+#      ATTRIBUTE_POSSIBLE_VALUES = 'ATTRIBUTE_POSSIBLE_VALUES';
+#      ATTRIBUTE_PREFIX = 'psiattribute';
+#      ATTRIBUTE_SORT_ORDER = 'attributeOrder';
+#      ATTRIBUTE_ENTITY = 'ATTRIBUTE_ENTITY';
+#      ATTRIBUTE_LIMIT_SCOPE = 'ATTRIBUTE_LIMIT_SCOPE';
+#      ATTRIBUTE_IS_PRIVATE = 'ATTRIBUTE_IS_PRIVATE';
+#      ATTRIBUTE_SECONDARY_CATEGORY = 'ATTRIBUTE_SECONDARY_CATEGORY';
+#      ATTRIBUTE_SECONDARY_ENTITY_IDS = 'ATTRIBUTE_SECONDARY_ENTITY_IDS';
+#      AUTO_ASSIGN = 'autoAssign';
+#      AUTO_ASSIGN_CLEAR = 'AUTO_ASSIGN_CLEAR';
+#      AUTO_RELEASE_MINUTES = 'AUTO_RELEASE_MINUTES';
+#      AVAILABILITY_RANGE = 'AVAILABILITY_RANGE';
+#      AVAILABLE_ALL_YEAR = 'AVAILABLE_ALL_YEAR';
+#      AVAILABLE_BEGIN_DATE = 'AVAILABLE_BEGIN_DATE';
+#      AVAILABLE_END_DATE = 'AVAILABLE_END_DATE';
+#      ALLOW_CONCURRENT_RESERVATIONS = 'ALLOW_CONCURRENT_RESERVATIONS';
+
+#      BEGIN_DATE = 'beginDate';
+#      BEGIN_PERIOD = 'beginPeriod';
+#      BEGIN_TIME = 'beginTime';
+#      BLACKOUT_APPLY_TO_SCHEDULE = 'applyToSchedule';
+#      BLACKOUT_INSTANCE_ID = 'BLACKOUT_INSTANCE_ID';
+#      BUFFER_TIME = 'BUFFER_TIME';
+#      BUFFER_TIME_NONE = 'BUFFER_TIME_NONE';
+
+#      CAPTCHA = 'captcha';
+#      CONFLICT_ACTION = 'conflictAction';
+#      CONTACT_INFO = 'contactInfo';
+#      CREDITS = 'CREDITS';
+#      CREDIT_COUNT = 'CREDIT_COUNT';
+#      CREDIT_COST = 'CREDIT_COST';
+#      CREDIT_CURRENCY = 'CREDIT_CURRENCY';
+#      CSS_FILE = 'CSS_FILE';
+#      CSRF_TOKEN = 'CSRF_TOKEN';
+#      CREDIT_QUANTITY = 'CREDIT_QUANTITY';
+#      CURRENT_PASSWORD = 'currentPassword';
+
+#      DAY = 'DAY';
+#      DEFAULT_HOMEPAGE = 'defaultHomepage';
+#      DESCRIPTION = 'reservationDescription';
+#      DURATION = 'duration';
+#      DELETE_REASON = 'DELETE_REASON';
+#      DISPLAY_PAGE = 'DISPLAY_PAGE';
+
+#      EMAIL = 'email';
+#      END_DATE = 'endDate';
+#      END_PERIOD = 'endPeriod';
+#      END_REMINDER_ENABLED = 'END_REMINDER_ENABLED';
+#      END_REMINDER_TIME = 'END_REMINDER_TIME';
+#      END_REMINDER_INTERVAL = 'END_REMINDER_INTERVAL';
+#      END_REPEAT_DATE = 'endRepeatDate';
+#      END_TIME = 'endTime';
+#      ENFORCE_ALL_DAY = 'ENFORCE_ALL_DAY';
+#      ENFORCE_EVERY_DAY = 'ENFORCE_EVERY_DAY';
+#      ENABLE_CHECK_IN = 'ENABLE_CHECK_IN';
+#      ENABLE_AUTO_RELEASE = 'ENABLE_AUTO_RELEASE';
+#      EMAIL_CONTENTS = 'EMAIL_CONTENTS';
+#      EMAIL_TEMPLATE_NAME = 'EMAIL_TEMPLATE_NAME';
+
+#      FIRST_NAME = 'fname';
+#      FAVICON_FILE = 'FAVICON_FILE';
+
+#      GROUP = 'group';
+#      GROUP_ID = 'group_id';
+#      GROUP_NAME = 'group_name';
+#      GROUP_ADMIN = 'group_admin';
+#      GROUP_IMPORT_FILE = 'GROUP_IMPORT_FILE';
+#      GUEST_INVITATION_LIST = 'guestInvitationList';
+#      GUEST_PARTICIPATION_LIST = 'guestParticipationList';
+
+#      HOURS = 'HOURS';
+
+#      INSTALL_PASSWORD = 'install_password';
+#      INSTALL_DB_USER = 'install_db_user';
+#      INSTALL_DB_PASSWORD = 'install_db_password';
+#      INVITATION_LIST = 'invitationList';
+#      IS_ACTIVE = 'isactive';
+#      ICS_IMPORT_FILE = 'ICS_IMPORT_FILE';
+#      INCLUDE_DELETED = 'INCLUDE_DELETED';
+#      INVITED_EMAILS = 'INVITED_EMAILS';
+#      IS_DEFAULT = 'IS_DEFAULT';
+
+#      LANGUAGE = 'language';
+#      LAST_NAME = 'lname';
+#      LIMIT = 'limit';
+#      LOCATION = 'location';
+#      LOGIN = 'login';
+#      LOGO_FILE = 'LOGO_FILE';
+#      LAYOUT_TYPE = 'LAYOUT_TYPE';
+#      LAYOUT_PERIOD_ID = 'LAYOUT_PERIOD_ID';
+
+#      MIN_DURATION = 'minDuration';
+#      MIN_DURATION_NONE = 'minDurationNone';
+#      MIN_INCREMENT = 'minIncrement';
+#      MIN_INCREMENT_NONE = 'minIncrementNone';
+#      MINUTES = 'MINUTES';
+#      MAX_DURATION = 'maxDuration';
+#      MAX_DURATION_NONE = 'maxDurationNone';
+#      MAX_PARTICIPANTS = 'maxParticipants';
+#      MAX_PARTICIPANTS_UNLIMITED = 'maxParticipantsUnlimited';
+#      MIN_NOTICE_ADD = 'minNoticeAdd';
+#      MIN_NOTICE_UPDATE = 'minNoticeUpdate';
+#      MIN_NOTICE_DELETE = 'minNoticeDelete';
+#      MIN_NOTICE_NONE_ADD = 'minNoticeNoneAdd';
+#      MIN_NOTICE_NONE_UPDATE = 'minNoticeNoneUpdate';
+#      MIN_NOTICE_NONE_DELETE = 'minNoticeNoneDelete';
+#      MIN_CAPACITY = 'MIN_CAPACITY';
+#      MAX_NOTICE = 'maxNotice';
+#      MAX_NOTICE_NONE = 'maxNoticeNone';
+#      MAXIMUM_CONCURRENT_UNLIMITED = 'MAXIMUM_CONCURRENT_UNLIMITED';
+#      MAXIMUM_CONCURRENT_RESERVATIONS = 'MAXIMUM_CONCURRENT_RESERVATIONS';
+#      MAXIMUM_RESOURCES_PER_RESERVATION_UNLIMITED = 'MAXIMUM_RESOURCES_PER_RESERVATION_UNLIMITED';
+#      MAXIMUM_RESOURCES_PER_RESERVATION = 'MAXIMUM_RESOURCES_PER_RESERVATION';
+#      MAX_CONCURRENT_RESERVATIONS = 'MAX_CONCURRENT_RESERVATIONS';
+
+#      NAME = 'name';
+#      NOTES = 'notes';
+
+#      ORGANIZATION = 'organization';
+#      ORIGINAL_RESOURCE_ID = 'ORIGINAL_RESOURCE_ID';
+#      OWNER_TEXT = 'ot';
+
+#      PARENT_ID = 'PARENT_ID';
+#      PARTICIPANT_LIST = 'participantList';
+#      PARTICIPANT_ID = 'PARTICIPANT_ID';
+#      PARTICIPANT_TEXT = 'pt';
+#      PASSWORD = 'password';
+#      PASSWORD_CONFIRM = 'passwordConfirm';
+#      PAYPAL_ENABLED = 'ENABLE_PAYPAL';
+#      PAYPAL_CLIENT_ID = 'PAYPAL_CLIENT_ID';
+#      PAYPAL_SECRET = 'PAYPAL_SECRET';
+#      PAYPAL_ENVIRONMENT = 'PAYPAL_ENVIRONMENT';
+#      PAYMENT_RESPONSE_DATA = 'PAYMENT_RESPONSE_DATA';
+#      PEAK_ALL_DAY = 'PEAK_ALL_DAY';
+#      PEAK_ALL_YEAR = 'PEAK_ALL_YEAR';
+#      PEAK_EVERY_DAY = 'PEAK_EVERY_DAY';
+#      PEAK_CREDITS = 'PEAK_CREDITS';
+#      PEAK_BEGIN_MONTH = 'PEAK_BEGIN_MONTH';
+#      PEAK_BEGIN_DAY = 'PEAK_BEGIN_DAY';
+#      PEAK_END_MONTH = 'PEAK_END_MONTH';
+#      PEAK_END_DAY = 'PEAK_END_DAY';
+#      PEAK_BEGIN_TIME = 'PEAK_BEGIN_TIME';
+#      PEAK_END_TIME = 'PEAK_END_TIME';
+#      PEAK_DELETE = 'PEAK_DELETE';
+#      PERSIST_LOGIN = 'persistLogin';
+#      PHONE = 'phone';
+#      POSITION = 'position';
+#      PK = 'pk';
+#      PERMISSION_TYPE = 'PERMISSION_TYPE';
+
+#      QUOTA_SCOPE= 'QUOTA_SCOPE';
+
+#      REFERENCE_NUMBER = 'referenceNumber';
+#      REFUND_AMOUNT = 'REFUND_AMOUNT';
+#      REFUND_TRANSACTION_ID = 'REFUND_TRANSACTION_ID';
+#      REMOVED_FILE_IDS = 'removeFile';
+#      REPEAT_OPTIONS = 'repeatOptions';
+#      REPEAT_EVERY = 'repeatEvery';
+#      REPEAT_SUNDAY = 'repeatSunday';
+#      REPEAT_MONDAY = 'repeatMonday';
+#      REPEAT_TUESDAY = 'repeatTuesday';
+#      REPEAT_WEDNESDAY = 'repeatWednesday';
+#      REPEAT_THURSDAY = 'repeatThursday';
+#      REPEAT_FRIDAY = 'repeatFriday';
+#      REPEAT_SATURDAY = 'repeatSaturday';
+#      REPEAT_MONTHLY_TYPE = 'repeatMonthlyType';
+#      REPORT_START = 'reportStart';
+#      REPORT_END = 'reportEnd';
+#      REPORT_GROUPBY = 'REPORT_GROUPBY';
+#      REPORT_RANGE = 'REPORT_RANGE';
+#      REPORT_RESULTS = 'reportResults';
+#      REPORT_USAGE = 'REPORT_USAGE';
+#      REPORT_NAME = 'REPORT_NAME';
+#      REQUIRES_APPROVAL = 'requiresApproval';
+#      RESERVATION_ACTION = 'reservationAction';
+#      RESERVATION_COLOR = 'RESERVATION_COLOR';
+#      RESERVATION_COLOR_RULE_ID = 'RESERVATION_COLOR_RULE_ID';
+#      RESERVATION_FILE = 'reservationFile';
+#      RESERVATION_ID = 'reservationId';
+#      RESERVATION_TITLE = 'reservationTitle';
+#      RESERVATION_RETRY_PREFIX = 'RESERVATION_RETRY_PREFIX';
+#      RESERVATION_IMPORT_FILE = 'RESERVATION_IMPORT_FILE';
+#      RESOURCE = 'resource';
+#      RESOURCE_ADMIN_GROUP_ID = 'resourceAdminGroupId';
+#      RESOURCE_CONTACT = 'resourceContact';
+#      RESOURCE_DESCRIPTION = 'resourceDescription';
+#      RESOURCE_ID = 'resourceId';
+#      RESOURCE_IMAGE = 'resourceImage';
+#      RESOURCE_IMPORT_FILE = 'resourceImportFile';
+#      RESOURCE_LOCATION = 'resourceLocation';
+#      RESOURCE_NAME = 'resourceName';
+#      RESOURCE_NOTES = 'resourceNotes';
+#      RESOURCE_SORT_ORDER = 'RESOURCE_SORT_ORDER';
+#      RESOURCE_TYPE_ID = 'RESOURCE_TYPE_ID';
+#      RESOURCE_TYPE_DESCRIPTION = 'RESOURCE_TYPE_DESCRIPTION';
+#      RESOURCE_TYPE_NAME = 'RESOURCE_TYPE_NAME';
+#      RESUME = 'resume';
+#      RETURN_URL = 'returnUrl';
+#      ROLE_ID = 'roleId';
+#      RESOURCE_STATUS_ID = 'RESOURCE_STATUS_ID';
+#      RESOURCE_STATUS_REASON = 'RESOURCE_STATUS_REASON';
+#      RESOURCE_STATUS_REASON_ID = 'RESOURCE_STATUS_REASON_ID';
+#      RESOURCE_STATUS_UPDATE_SCOPE = 'RESOURCE_STATUS_UPDATE_SCOPE';
+#      ROLLING = 'ROLLING';
+#      REPEAT_CUSTOM_DATES = 'repeatCustomDates';
+
+#      SCHEDULE_ID = 'scheduleId';
+#      SCHEDULE_NAME = 'scheduleName';
+#      SCHEDULE_WEEKDAY_START = 'scheduleWeekdayStart';
+#      SCHEDULE_DAYS_VISIBLE = 'scheduleDaysVisible';
+#      SCHEDULE_DEFAULT_STYLE = 'SCHEDULE_DEFAULT_STYLE';
+#      SEND_AS_EMAIL = 'SEND_AS_EMAIL';
+#      SERIES_UPDATE_SCOPE = 'seriesUpdateScope';
+#      START_REMINDER_ENABLED = 'START_REMINDER_ENABLED';
+#      START_REMINDER_TIME = 'START_REMINDER_TIME';
+#      START_REMINDER_INTERVAL = 'START_REMINDER_INTERVAL';
+#      SLOTS_BLOCKED = 'blockedSlots';
+#      SLOTS_RESERVABLE = 'reservableSlots';
+#      STATUS_ID = 'STATUS_ID';
+#      STRIPE_ENABLED = 'ENABLE_STRIPE';
+#      STRIPE_PUBLISHABLE_KEY = 'STRIPE_PUBLISHABLE_KEY';
+#      STRIPE_SECRET_KEY = 'STRIPE_SECRET_KEY';
+#      STRIPE_TOKEN = 'STRIPE_TOKEN';
+#      SUBMIT = 'SUBMIT';
+#      SUMMARY = 'summary';
+#      SCHEDULE_ADMIN_GROUP_ID = 'adminGroupId';
+#      SELECTED_COLUMNS = 'SELECTED_COLUMNS';
+#      SLACK_COMMAND = 'command';
+#      SLACK_TEXT = 'text';
+#      SLACK_TOKEN = 'token';
+#      SPECIFIC_TIME = 'SPECIFIC_TIME';
+#      SPECIFIC_DATES = 'SPECIFIC_DATES';
+
+#      THISWEEK = 'THISWEEK';
+#      TIMEZONE = 'timezone';
+#      TODAY = 'TODAY';
+#      TOMMOROW = 'TOMMOROW';
+#      TOS_METHOD = 'TOS_METHOD';
+#      TOS_APPLICABILITY = 'TOS_APPLICABILITY';
+#      TOS_TEXT = 'TOS_TEXT';
+#      TOS_URL = 'TOS_URL';
+#      TOS_UPLOAD = 'TOS_UPLOAD';
+#      TOS_ACKNOWLEDGEMENT = 'TOS_ACKNOWLEDGEMENT';
+
+#      UNIT = 'unit';
+#      UNIT_COST = 'unitCost';
+#      USER_ID = 'userId';
+#      USERNAME = 'username';
+#      USER_IMPORT_FILE = 'USER_IMPORT_FILE';
+#      USING_SINGLE_LAYOUT = 'USING_SINGLE_LAYOUT';
+#      UPDATE_ON_IMPORT = 'UPDATE_ON_IMPORT';
+
+#      VALUE = 'value';
+
+#     public static function Evaluate($formKey)
+#     {
+#         $key = strtoupper($formKey);
+#         return eval("return FormKeys::$key;");
+#     }
+# }
+
+
+from enum import Enum
+
+class FormKeys(Enum):
+     ACCESSORY_LIST = 'accessoryList'
+     ACCESSORY_NAME = 'accessoryName' 
+     ACCESSORY_ID = 'ACCESSORY_ID'
+     ACCESSORY_QUANTITY_AVAILABLE = 'accessoryQuantityAvailable'
+     ACCESSORY_RESOURCE = 'accessoryResource'
+     ACCESSORY_MIN_QUANTITY = 'ACCESSORY_MIN_QUANTITY'
+     ACCESSORY_MAX_QUANTITY = 'ACCESSORY_MAX_QUANTITY'
+     ADDITIONAL_RESOURCES = 'additionalResources'
+     ADDRESS = 'address'
+     ALLOW_CALENDAR_SUBSCRIPTIONS = 'ALLOW_CALENDAR_SUBSCRIPTIONS'
+     ALLOW_MULTIDAY = 'allowMultiday'
+     ALLOW_PARTICIPATION = 'ALLOW_PARTICIPATION'
+     ANNOUNCEMENT_TEXT = 'announcementText'
+     ANNOUNCEMENT_START = 'announcementStart' 
+     ANNOUNCEMENT_END = 'announcementEnd'
+     ANNOUNCEMENT_PRIORITY = 'announcementPriority'
+     ATTRIBUTE_ID = 'ATTRIBUTE_ID'
+     ATTRIBUTE_VALUE = 'ATTRIBUTE_VALUE'
+     ATTRIBUTE_LABEL = 'ATTRIBUTE_LABEL'
+     ATTRIBUTE_TYPE = 'ATTRIBUTE_TYPE'
+    # ...other constants
+     ATTRIBUTE_CATEGORY = 'ATTRIBUTE_CATEGORY'
+     ATTRIBUTE_VALIDATION_EXPRESSION = 'ATTRIBUTE_VALIDATION_EXPRESSION'
+     ATTRIBUTE_IS_ADMIN_ONLY = 'ATTRIBUTE_IS_ADMIN_ONLY'
+     ATTRIBUTE_IS_REQUIRED = 'ATTRIBUTE_IS_REQUIRED'
+     ATTRIBUTE_IS_UNIQUE = 'ATTRIBUTE_IS_UNIQUE'
+     ATTRIBUTE_POSSIBLE_VALUES = 'ATTRIBUTE_POSSIBLE_VALUES'
+     ATTRIBUTE_PREFIX = 'psiattribute'
+     ATTRIBUTE_SORT_ORDER = 'attributeOrder'
+     ATTRIBUTE_ENTITY = 'ATTRIBUTE_ENTITY'
+     ATTRIBUTE_LIMIT_SCOPE = 'ATTRIBUTE_LIMIT_SCOPE'
+     ATTRIBUTE_IS_PRIVATE = 'ATTRIBUTE_IS_PRIVATE'
+     ATTRIBUTE_SECONDARY_CATEGORY = 'ATTRIBUTE_SECONDARY_CATEGORY'
+     ATTRIBUTE_SECONDARY_ENTITY_IDS = 'ATTRIBUTE_SECONDARY_ENTITY_IDS'
+     AUTO_ASSIGN = 'autoAssign'
+     AUTO_ASSIGN_CLEAR = 'AUTO_ASSIGN_CLEAR'
+     AUTO_RELEASE_MINUTES = 'AUTO_RELEASE_MINUTES'
+     AVAILABILITY_RANGE = 'AVAILABILITY_RANGE'
+     AVAILABLE_ALL_YEAR = 'AVAILABLE_ALL_YEAR'
+     AVAILABLE_BEGIN_DATE = 'AVAILABLE_BEGIN_DATE'
+     AVAILABLE_END_DATE = 'AVAILABLE_END_DATE'
+     ALLOW_CONCURRENT_RESERVATIONS = 'ALLOW_CONCURRENT_RESERVATIONS'
+
+     BEGIN_DATE = 'beginDate'
+     BEGIN_PERIOD = 'beginPeriod'
+     BEGIN_TIME = 'beginTime'
+     BLACKOUT_APPLY_TO_SCHEDULE = 'applyToSchedule'
+     BLACKOUT_INSTANCE_ID = 'BLACKOUT_INSTANCE_ID'
+     BUFFER_TIME = 'BUFFER_TIME'
+     BUFFER_TIME_NONE = 'BUFFER_TIME_NONE'
+
+     CAPTCHA = 'captcha'
+     CONFLICT_ACTION = 'conflictAction'
+     CONTACT_INFO = 'contactInfo'
+     CREDITS = 'CREDITS'
+     CREDIT_COUNT = 'CREDIT_COUNT'
+     CREDIT_COST = 'CREDIT_COST'
+     CREDIT_CURRENCY = 'CREDIT_CURRENCY'
+     CSS_FILE = 'CSS_FILE'
+     CSRF_TOKEN = 'CSRF_TOKEN'
+     CREDIT_QUANTITY = 'CREDIT_QUANTITY'
+     CURRENT_PASSWORD = 'currentPassword'
+
+     DAY = 'DAY'
+     DEFAULT_HOMEPAGE = 'defaultHomepage'
+     DESCRIPTION = 'reservationDescription'
+     DURATION = 'duration'
+     DELETE_REASON = 'DELETE_REASON'
+     DISPLAY_PAGE = 'DISPLAY_PAGE'
+
+     EMAIL = 'email'
+     END_DATE = 'endDate'
+     END_PERIOD = 'endPeriod'
+     END_REMINDER_ENABLED = 'END_REMINDER_ENABLED'
+     END_REMINDER_TIME = 'END_REMINDER_TIME'
+     END_REMINDER_INTERVAL = 'END_REMINDER_INTERVAL'
+     END_REPEAT_DATE = 'endRepeatDate'
+     END_TIME = 'endTime'
+     ENFORCE_ALL_DAY = 'ENFORCE_ALL_DAY'
+     ENFORCE_EVERY_DAY = 'ENFORCE_EVERY_DAY'
+     ENABLE_CHECK_IN = 'ENABLE_CHECK_IN'
+     ENABLE_AUTO_RELEASE = 'ENABLE_AUTO_RELEASE'
+     EMAIL_CONTENTS = 'EMAIL_CONTENTS'
+     EMAIL_TEMPLATE_NAME = 'EMAIL_TEMPLATE_NAME'
+
+     FIRST_NAME = 'fname'
+     FAVICON_FILE = 'FAVICON_FILE'
+
+     GROUP = 'group'
+     GROUP_ID = 'group_id'
+     GROUP_NAME = 'group_name'
+     GROUP_ADMIN = 'group_admin'
+     GROUP_IMPORT_FILE = 'GROUP_IMPORT_FILE'
+     GUEST_INVITATION_LIST = 'guestInvitationList'
+     GUEST_PARTICIPATION_LIST = 'guestParticipationList'
+
+     HOURS = 'HOURS'
+
+     INSTALL_PASSWORD = 'install_password'
+     INSTALL_DB_USER = 'install_db_user'
+     INSTALL_DB_PASSWORD = 'install_db_password'
+     INVITATION_LIST = 'invitationList'
+     IS_ACTIVE = 'isactive'
+     ICS_IMPORT_FILE = 'ICS_IMPORT_FILE'
+     INCLUDE_DELETED = 'INCLUDE_DELETED'
+     INVITED_EMAILS = 'INVITED_EMAILS'
+     IS_DEFAULT = 'IS_DEFAULT'
+
+     LANGUAGE = 'language'
+     LAST_NAME = 'lname'
+     LIMIT = 'limit'
+     LOCATION = 'location'
+     LOGIN = 'login'
+     LOGO_FILE = 'LOGO_FILE'
+     LAYOUT_TYPE = 'LAYOUT_TYPE'
+     LAYOUT_PERIOD_ID = 'LAYOUT_PERIOD_ID'
+
+     MIN_DURATION = 'minDuration'
+     MIN_DURATION_NONE = 'minDurationNone'
+     MIN_INCREMENT = 'minIncrement'
+     MIN_INCREMENT_NONE = 'minIncrementNone'
+     MINUTES = 'MINUTES'
+     MAX_DURATION = 'maxDuration'
+     MAX_DURATION_NONE = 'maxDurationNone'
+     MAX_PARTICIPANTS = 'maxParticipants'
+     MAX_PARTICIPANTS_UNLIMITED = 'maxParticipantsUnlimited'
+     MIN_NOTICE_ADD = 'minNoticeAdd'
+     MIN_NOTICE_UPDATE = 'minNoticeUpdate'
+     MIN_NOTICE_DELETE = 'minNoticeDelete'
+     MIN_NOTICE_NONE_ADD = 'minNoticeNoneAdd'
+     MIN_NOTICE_NONE_UPDATE = 'minNoticeNoneUpdate'
+     MIN_NOTICE_NONE_DELETE = 'minNoticeNoneDelete'
+     MIN_CAPACITY = 'MIN_CAPACITY'
+     MAX_NOTICE = 'maxNotice'
+     MAX_NOTICE_NONE = 'maxNoticeNone'
+     MAXIMUM_CONCURRENT_UNLIMITED = 'MAXIMUM_CONCURRENT_UNLIMITED'
+     MAXIMUM_CONCURRENT_RESERVATIONS = 'MAXIMUM_CONCURRENT_RESERVATIONS'
+     MAXIMUM_RESOURCES_PER_RESERVATION_UNLIMITED = 'MAXIMUM_RESOURCES_PER_RESERVATION_UNLIMITED'
+     MAXIMUM_RESOURCES_PER_RESERVATION = 'MAXIMUM_RESOURCES_PER_RESERVATION'
+     MAX_CONCURRENT_RESERVATIONS = 'MAX_CONCURRENT_RESERVATIONS'
+
+     NAME = 'name'
+     NOTES = 'notes'
+
+     ORGANIZATION = 'organization'
+     ORIGINAL_RESOURCE_ID = 'ORIGINAL_RESOURCE_ID'
+     OWNER_TEXT = 'ot'
+
+     PARENT_ID = 'PARENT_ID'
+     PARTICIPANT_LIST = 'participantList'
+     PARTICIPANT_ID = 'PARTICIPANT_ID'
+     PARTICIPANT_TEXT = 'pt'
+     PASSWORD = 'password'
+     PASSWORD_CONFIRM = 'passwordConfirm'
+     PAYPAL_ENABLED = 'ENABLE_PAYPAL'
+     PAYPAL_CLIENT_ID = 'PAYPAL_CLIENT_ID'
+     PAYPAL_SECRET = 'PAYPAL_SECRET'
+     PAYPAL_ENVIRONMENT = 'PAYPAL_ENVIRONMENT'
+     PAYMENT_RESPONSE_DATA = 'PAYMENT_RESPONSE_DATA'
+     PEAK_ALL_DAY = 'PEAK_ALL_DAY'
+     PEAK_ALL_YEAR = 'PEAK_ALL_YEAR'
+     PEAK_EVERY_DAY = 'PEAK_EVERY_DAY'
+     PEAK_CREDITS = 'PEAK_CREDITS'
+     PEAK_BEGIN_MONTH = 'PEAK_BEGIN_MONTH'
+     PEAK_BEGIN_DAY = 'PEAK_BEGIN_DAY'
+     PEAK_END_MONTH = 'PEAK_END_MONTH'
+     PEAK_END_DAY = 'PEAK_END_DAY'
+     PEAK_BEGIN_TIME = 'PEAK_BEGIN_TIME'
+     PEAK_END_TIME = 'PEAK_END_TIME'
+     PEAK_DELETE = 'PEAK_DELETE'
+     PERSIST_LOGIN = 'persistLogin'
+     PHONE = 'phone'
+     POSITION = 'position'
+     PK = 'pk'
+     PERMISSION_TYPE = 'PERMISSION_TYPE'
+
+     QUOTA_SCOPE= 'QUOTA_SCOPE'
+
+     REFERENCE_NUMBER = 'referenceNumber'
+     REFUND_AMOUNT = 'REFUND_AMOUNT'
+     REFUND_TRANSACTION_ID = 'REFUND_TRANSACTION_ID'
+     REMOVED_FILE_IDS = 'removeFile'
+     REPEAT_OPTIONS = 'repeatOptions'
+     REPEAT_EVERY = 'repeatEvery'
+     REPEAT_SUNDAY = 'repeatSunday'
+     REPEAT_MONDAY = 'repeatMonday'
+     REPEAT_TUESDAY = 'repeatTuesday'
+     REPEAT_WEDNESDAY = 'repeatWednesday'
+     REPEAT_THURSDAY = 'repeatThursday'
+     REPEAT_FRIDAY = 'repeatFriday'
+     REPEAT_SATURDAY = 'repeatSaturday'
+     REPEAT_MONTHLY_TYPE = 'repeatMonthlyType'
+     REPORT_START = 'reportStart'
+     REPORT_END = 'reportEnd'
+     REPORT_GROUPBY = 'REPORT_GROUPBY'
+     REPORT_RANGE = 'REPORT_RANGE'
+     REPORT_RESULTS = 'reportResults'
+     REPORT_USAGE = 'REPORT_USAGE'
+     REPORT_NAME = 'REPORT_NAME'
+     REQUIRES_APPROVAL = 'requiresApproval'
+     RESERVATION_ACTION = 'reservationAction'
+     RESERVATION_COLOR = 'RESERVATION_COLOR'
+     RESERVATION_COLOR_RULE_ID = 'RESERVATION_COLOR_RULE_ID'
+     RESERVATION_FILE = 'reservationFile'
+     RESERVATION_ID = 'reservationId'
+     RESERVATION_TITLE = 'reservationTitle'
+     RESERVATION_RETRY_PREFIX = 'RESERVATION_RETRY_PREFIX'
+     RESERVATION_IMPORT_FILE = 'RESERVATION_IMPORT_FILE'
+     RESOURCE = 'resource'
+     RESOURCE_ADMIN_GROUP_ID = 'resourceAdminGroupId'
+     RESOURCE_CONTACT = 'resourceContact'
+     RESOURCE_DESCRIPTION = 'resourceDescription'
+     RESOURCE_ID = 'resourceId'
+     RESOURCE_IMAGE = 'resourceImage'
+     RESOURCE_IMPORT_FILE = 'resourceImportFile'
+     RESOURCE_LOCATION = 'resourceLocation'
+     RESOURCE_NAME = 'resourceName'
+     RESOURCE_NOTES = 'resourceNotes'
+     RESOURCE_SORT_ORDER = 'RESOURCE_SORT_ORDER'
+     RESOURCE_TYPE_ID = 'RESOURCE_TYPE_ID'
+     RESOURCE_TYPE_DESCRIPTION = 'RESOURCE_TYPE_DESCRIPTION'
+     RESOURCE_TYPE_NAME = 'RESOURCE_TYPE_NAME'
+     RESUME = 'resume'
+     RETURN_URL = 'returnUrl'
+     ROLE_ID = 'roleId'
+     RESOURCE_STATUS_ID = 'RESOURCE_STATUS_ID'
+     RESOURCE_STATUS_REASON = 'RESOURCE_STATUS_REASON'
+     RESOURCE_STATUS_REASON_ID = 'RESOURCE_STATUS_REASON_ID'
+     RESOURCE_STATUS_UPDATE_SCOPE = 'RESOURCE_STATUS_UPDATE_SCOPE'
+     ROLLING = 'ROLLING'
+     REPEAT_CUSTOM_DATES = 'repeatCustomDates'
+
+     SCHEDULE_ID = 'scheduleId'
+     SCHEDULE_NAME = 'scheduleName'
+     SCHEDULE_WEEKDAY_START = 'scheduleWeekdayStart'
+     SCHEDULE_DAYS_VISIBLE = 'scheduleDaysVisible'
+     SCHEDULE_DEFAULT_STYLE = 'SCHEDULE_DEFAULT_STYLE'
+     SEND_AS_EMAIL = 'SEND_AS_EMAIL'
+     SERIES_UPDATE_SCOPE = 'seriesUpdateScope'
+     START_REMINDER_ENABLED = 'START_REMINDER_ENABLED'
+     START_REMINDER_TIME = 'START_REMINDER_TIME'
+     START_REMINDER_INTERVAL = 'START_REMINDER_INTERVAL'
+     SLOTS_BLOCKED = 'blockedSlots'
+     SLOTS_RESERVABLE = 'reservableSlots'
+     STATUS_ID = 'STATUS_ID'
+     STRIPE_ENABLED = 'ENABLE_STRIPE'
+     STRIPE_PUBLISHABLE_KEY = 'STRIPE_PUBLISHABLE_KEY'
+     STRIPE_SECRET_KEY = 'STRIPE_SECRET_KEY'
+     STRIPE_TOKEN = 'STRIPE_TOKEN'
+     SUBMIT = 'SUBMIT'
+     SUMMARY = 'summary'
+     SCHEDULE_ADMIN_GROUP_ID = 'adminGroupId'
+     SELECTED_COLUMNS = 'SELECTED_COLUMNS'
+     SLACK_COMMAND = 'command'
+     SLACK_TEXT = 'text'
+     SLACK_TOKEN = 'token'
+     SPECIFIC_TIME = 'SPECIFIC_TIME'
+     SPECIFIC_DATES = 'SPECIFIC_DATES'
+
+     THISWEEK = 'THISWEEK'
+     TIMEZONE = 'timezone'
+     TODAY = 'TODAY'
+     TOMMOROW = 'TOMMOROW'
+     TOS_METHOD = 'TOS_METHOD'
+     TOS_APPLICABILITY = 'TOS_APPLICABILITY'
+     TOS_TEXT = 'TOS_TEXT'
+     TOS_URL = 'TOS_URL'
+     TOS_UPLOAD = 'TOS_UPLOAD'
+     TOS_ACKNOWLEDGEMENT = 'TOS_ACKNOWLEDGEMENT'
+
+     UNIT = 'unit'
+     UNIT_COST = 'unitCost'
+     USER_ID = 'userId'
+     USERNAME = 'username'
+     USER_IMPORT_FILE = 'USER_IMPORT_FILE'
+     USING_SINGLE_LAYOUT = 'USING_SINGLE_LAYOUT'
+     UPDATE_ON_IMPORT = 'UPDATE_ON_IMPORT'
+
+     VALUE = 'value' 
+     @staticmethod
+     def get(form_key):
+        return FormKeys[form_key.upper()].value
